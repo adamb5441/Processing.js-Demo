@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Sketch</title>
+    
+    <!-- Load the Processing.js library -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+	</head>
+	<body>
+		<script type="application/processing">
+			void setup(){
+				size(400, 400);
+			}
+            noStroke();
+			var x = 1;
+
+            draw = function() {
+    
+                // all lines of code inside here will be run repeatedly
+                background(151, 244, 247);
+                
+                // draw the car body
+                fill(255, 0, 115);
+                rect(x, 200, 100, 20);
+                rect(x + 15, 178, 70, 40);
+                
+                // draw the wheels
+                fill(77, 66, 66);
+                ellipse(x + 25, 221, 24, 24);
+                ellipse(x + 75, 221, 24, 24);
+                
+                x = x + 10;
+            };
+		</script>
+		<canvas> </canvas>
+	</body>
+</html>
